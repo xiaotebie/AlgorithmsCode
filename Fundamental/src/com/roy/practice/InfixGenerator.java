@@ -39,7 +39,6 @@ public class InfixGenerator {
                 String first = numberStack.pop();
                 numberStack.push(LEFT_BRACKET + first + oper + last + RIGHT_BRACKET);
             }
-
         }
         StringBuilder builder = new StringBuilder();
         while (!numberStack.isEmpty()) {
