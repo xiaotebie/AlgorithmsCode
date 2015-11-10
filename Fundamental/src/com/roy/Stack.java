@@ -1,5 +1,7 @@
 package com.roy;
 
+import java.util.NoSuchElementException;
+
 /**
  * 下压堆栈（链表实现）
  * Created by Roy on 2015/11/9 0009.
@@ -31,5 +33,10 @@ public class Stack<Item>
         first = first.next;
         N--;
         return item;
+    }
+    public Item peek()
+    {
+        if (isEmpty()) throw new NoSuchElementException("Stack underflow");
+        return first.item;
     }
 }
