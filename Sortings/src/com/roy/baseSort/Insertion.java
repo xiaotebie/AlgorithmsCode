@@ -13,8 +13,8 @@ import java.util.List;
  */
 public class Insertion extends Example{
 
-    public static void sort(Comparable[] a){
-        for (int i = 1; i < a.length; i++){
+    public static void sort(Comparable[] a, int low, int high){
+        for (int i = low + 1; i < high; i++){
             for (int j = i ; j > 0 && less(a[j], a[j - 1]); j--)
                 exch(a, j, j-1);
         }
@@ -23,7 +23,7 @@ public class Insertion extends Example{
     public static void main(String[] args){
         // 从标准输入读取字符串，将它们排序输出
         Integer[] a = new Integer[] {1, 3, 2,29,11, 24 };
-        sort(a);
+        sort(a,0,a.length);
         assert isSorted(a);
         show(a);
     }
