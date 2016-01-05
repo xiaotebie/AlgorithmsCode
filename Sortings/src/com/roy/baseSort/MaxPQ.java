@@ -1,7 +1,5 @@
 package com.roy.baseSort;
 
-import com.roy.Example;
-
 /**
  * 优先队列<br>
  * 二叉堆，完全二叉树表示
